@@ -18,7 +18,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path(r'^$', views.index, name='index'),
     path(r'^(?P<question_id>[0-9]+)/$', views.details, name='details'),
     path(r'^(?P<question_id>[0-9]+)/results$', views.results, name='results'),
     path(r'^(?P<question_id>[0-9]+)/vote$', views.vote, name='vote'),
